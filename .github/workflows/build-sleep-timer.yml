@@ -7,11 +7,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build Sleep Timer
+      - name: Build APK
         run: bash tools/docker-build.sh addons/sleep-timer
 
       - name: Upload APK
